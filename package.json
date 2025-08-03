@@ -1,0 +1,16 @@
+{
+  "name": "kibu",
+  "version": "0.0.1",
+  "description": "kibu is a discord application to manage servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "discord",
+    "app",
+    "bot"
+  ],
+  "author": "xheenz",
+  "license": "ISC"
+}
