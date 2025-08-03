@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "kibu is a discord application to manage servers",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "test"
   },

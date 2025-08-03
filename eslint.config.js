@@ -3,6 +3,9 @@ const js = require('@eslint/js');
 module.exports = [
 	js.configs.recommended,
 	{
+		env: {
+			node: true,
+		},
 		languageOptions: {
 			ecmaVersion: 'latest',
 		},
@@ -29,7 +32,7 @@ module.exports = [
 			'no-shadow': ['error', { allow: ['err', 'resolve', 'reject'] }],
 			'no-trailing-spaces': ['error'],
 			'no-var': 'error',
-			'no-undef': 'off',
+			'no-undef': 'error',
 			'object-curly-spacing': ['error', 'always'],
 			'prefer-const': 'error',
 			quotes: ['error', 'single'],
