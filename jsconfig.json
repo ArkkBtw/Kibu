@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "checkJs": true
+    "checkJs": true,
+    "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "**/node_modules/*"]
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
 }
