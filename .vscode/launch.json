@@ -13,5 +13,14 @@
             ],
             "program": "${workspaceFolder}\\playground.js"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "bot",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\index.js"
+        },
     ]
 }
