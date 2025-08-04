@@ -11,7 +11,7 @@ module.exports = {
             .setName('Game')
             .setDescription('The game you are looking to play')
             .setRequired(true)),
-    async execute(/** @type {ChatInputCommandInteraction} */ interaction) {
+    async execute(/** @type {ChatInputCommandInteraction<'cached'>} */ interaction) {
         await interaction.reply('Testing ✅' + interaction.options.getRole('Game'));
         const position = list.indexOf(interaction.user.id)
         if (position !== -1) {
