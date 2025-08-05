@@ -18,10 +18,10 @@ function createculoembed(/** @type {any[]} */ list) {
             // { name: "Player", value: 'Some value here', inline: true },
             // { name: "Player", value: 'Some value here', inline: true },
         )
-        .addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
+        //.addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
         //.setImage('https://i.imgur.com/2Utpujo.png')
         .setTimestamp()
-        .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/2Utpujo.png' });
+    //.setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/2Utpujo.png' });
 
 }
 
@@ -76,7 +76,8 @@ module.exports = {
 
         // await interaction.channel.send(`${userMention(list[0])}, ${userMention(list[1])}, ${userMention(list[2])}>`)
         //await interaction.channel.send
-        await interaction.channel.send({ embeds: [createculoembed(list)] })
+        const message = await interaction.channel.send({ embeds: [createculoembed([])] })
+        await message.edit({ embeds: [createculoembed(list)] })
         //await interaction.channel.send({ components: [culorow] })
     },
 };
