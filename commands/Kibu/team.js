@@ -7,10 +7,10 @@ function createculoembed(/** @type {any[]} */ list) {
     return new EmbedBuilder()
         .setColor('#E67E22')
         //.set title: prints title
-        .setTitle('Team finder')
+        .setTitle('jugadores recientes')
         //.setURL('https://discord.js.org/')
         //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-        .setDescription('Some description here')
+        .setDescription('Aqui encontraras los jugadores mas recientes del juego seleccionado')
         .setThumbnail('https://i.imgur.com/2Utpujo.png')
         .addFields(
             list.map(id => ({ name: "Player", value: userMention(id) }))
