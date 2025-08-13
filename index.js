@@ -1,3 +1,19 @@
+// ignore this shit, this is just to make the online host working
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+
+
+
 // Require the necessary discord.js classes
 const fs = require('node:fs');
 const path = require('node:path');
