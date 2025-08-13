@@ -27,7 +27,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBit
 
 client.once("ready", () => {
 	// Playing in my support server
-	client.user.setActivity(" " + " Arkk bobi ", { type: 0 });
+	client.user.setActivity(" " + " BWF Crecer ", { type: 3 });
 });
 
 

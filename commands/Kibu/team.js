@@ -10,8 +10,8 @@ function createculoembed(/** @type {any[]} */ list, game) {
         .setTitle('jugadores recientes')
         //.setURL('https://discord.js.org/')
         //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-        .setDescription("Mostrando los ultimos 3 jugadores que querian jugar al juego seleccionado.")
-        .setThumbnail('https://i.imgur.com/2Utpujo.png')
+        .setDescription("¡Miau! Estos son algunos de los jugadores recientes que estaban cazando un compañero para este juego.")
+        .setThumbnail('https://i.imgur.com/bC5CdRI.png')
         .addFields(
             list.map(id => ({ name: "Player", value: userMention(id) }))
             // { name: '\u200B', value: '\u200B' },

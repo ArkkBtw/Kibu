@@ -18,7 +18,7 @@ const culoembed = new EmbedBuilder()
     //.setURL('https://discord.js.org/')
     //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
     .setDescription('Quieres apoyarnos y destacar en el servidor?')
-    .setThumbnail('https://i.imgur.com/2Utpujo.png')
+    .setThumbnail('https://i.imgur.com/bC5CdRI.png')
     .addFields(
         { name: '1', value: 'Some value here' },
         { name: '2', value: 'Some value here' },
@@ -31,9 +31,9 @@ const culoembed = new EmbedBuilder()
         // { name: 'Inline field title', value: 'Some value here', inline: true },
     )
     //.addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
-    .setImage('https://i.imgur.com/2Utpujo.png')
+    .setImage('https://i.imgur.com/bC5CdRI.png')
     //.setTimestamp()
-    .setFooter({ text: 'Powered by Kibu', iconURL: 'https://i.imgur.com/2Utpujo.png' });
+    .setFooter({ text: 'Powered by Kibu', iconURL: 'https://i.imgur.com/bC5CdRI.png' });
 
 
 
