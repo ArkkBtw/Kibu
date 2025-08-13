@@ -1,16 +1,16 @@
-const { userMention, Role, SlashCommandBuilder, SlashCommandRoleOption, ChatInputCommandInteraction, SlashCommandStringOption, InteractionCallback, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder } = require('discord.js');
+const { userMention, Role, SlashCommandBuilder, SlashCommandRoleOption, ChatInputCommandInteraction, SlashCommandStringOption, InteractionCallback, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, roleMention } = require('discord.js');
 
 const gamesOfRecentPeople = new Map()
 
 //funtion can use any value like "list" even outside the code, and use it anywhere
-function createculoembed(/** @type {any[]} */ list) {
+function createculoembed(/** @type {any[]} */ list, game) {
     return new EmbedBuilder()
         .setColor('#E67E22')
         //.set title: prints title
         .setTitle('jugadores recientes')
         //.setURL('https://discord.js.org/')
         //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-        .setDescription('Aqui encontraras los jugadores mas recientes del juego seleccionado')
+        .setDescription("Mostrando los ultimos 3 jugadores que querian jugar al juego seleccionado.")
         .setThumbnail('https://i.imgur.com/2Utpujo.png')
         .addFields(
             list.map(id => ({ name: "Player", value: userMention(id) }))
@@ -71,13 +71,13 @@ module.exports = {
         }
         list.push(interaction.user.id)
 
-        console.log("the user", list, "selected the role", game.id)
+        console.log("the user", list, "selected the role", game.name)
         console.log(list)
 
         // await interaction.channel.send(`${userMention(list[0])}, ${userMention(list[1])}, ${userMention(list[2])}>`)
         //await interaction.channel.send
         const message = await interaction.channel.send({ embeds: [createculoembed([])] })
-        await message.edit({ embeds: [createculoembed(list)] })
+        await message.edit({ embeds: [createculoembed(list, game)] })
         //await interaction.channel.send({ components: [culorow] })
     },
 };

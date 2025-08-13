@@ -14,21 +14,26 @@ const { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ActionRowBuilder,
 const culoembed = new EmbedBuilder()
     .setColor('#71368A')
     //.set title: prints title
-    .setTitle('Some title')
-    .setURL('https://discord.js.org/')
-    .setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-    .setDescription('Some description here')
+    .setTitle('Tienda BWF ✨')
+    //.setURL('https://discord.js.org/')
+    //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
+    .setDescription('Quieres apoyarnos y destacar en el servidor?')
     .setThumbnail('https://i.imgur.com/2Utpujo.png')
     .addFields(
-        { name: 'Regular field title', value: 'Some value here' },
+        { name: '1', value: 'Some value here' },
+        { name: '2', value: 'Some value here' },
+        { name: '3', value: 'Some value here' },
+        { name: '4', value: 'Some value here' },
+        { name: '5', value: 'Some value here' },
+        { name: '6', value: 'Some value here' },
         { name: '\u200B', value: '\u200B' },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
-        { name: 'Inline field title', value: 'Some value here', inline: true },
+        // { name: 'Inline field title', value: 'Some value here', inline: true },
+        // { name: 'Inline field title', value: 'Some value here', inline: true },
     )
-    .addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
+    //.addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
     .setImage('https://i.imgur.com/2Utpujo.png')
-    .setTimestamp()
-    .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/2Utpujo.png' });
+    //.setTimestamp()
+    .setFooter({ text: 'Powered by Kibu', iconURL: 'https://i.imgur.com/2Utpujo.png' });
 
 
 
@@ -53,7 +58,7 @@ module.exports = {
         .setDescription('accede la tienda de BWF'),
     async execute(interaction) {
 
-        await interaction.reply(' command online ✅');
+        await interaction.reply('Kibu esta buscando...');
         await interaction.channel.send({ embeds: [culoembed] })
         await interaction.channel.send({ components: [culorow] })
 

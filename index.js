@@ -6,7 +6,14 @@ const { token } = require('./config.json');
 
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences] });
+
+
+client.once("ready", () => {
+	// Playing in my support server
+	client.user.setActivity(" " + " Arkk bobi ", { type: 0 });
+});
+
 
 const commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
