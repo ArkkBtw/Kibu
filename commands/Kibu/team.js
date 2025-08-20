@@ -13,7 +13,7 @@ function createculoembed(/** @type {any[]} */ list, game) {
         .setDescription("¡Miau! Estos son algunos de los jugadores recientes que estaban cazando un compañero para este juego.")
         .setThumbnail('https://i.imgur.com/bC5CdRI.png')
         .addFields(
-            list.map(id => ({ name: "Player", value: userMention(id) }))
+            list.map(id => ({ name: "Jugador", value: userMention(id) }))
             // { name: '\u200B', value: '\u200B' },
             // { name: "Player", value: 'Some value here', inline: true },
             // { name: "Player", value: 'Some value here', inline: true },
