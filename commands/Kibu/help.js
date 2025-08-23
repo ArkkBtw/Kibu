@@ -17,12 +17,12 @@ const culoembed = new EmbedBuilder()
     .setTitle('Comandos disponibles')
     //.setURL('https://discord.js.org/')
     //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-    .setDescription('Kibu te enseña todos los comandos de usuario')
+    .setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
     .setThumbnail('https://i.imgur.com/bC5CdRI.png')
     .addFields(
-        { name: '1', value: 'Some value here' },
-        { name: '2', value: 'Some value here' },
-        { name: '3', value: 'Some value here' },
+        { name: '1', value: '/Shop - Te muestra el link directo al servidor' },
+        { name: '2', value: '/team <juego> - Encuentra gente que buscaba alguien para jugar recientemente (BETA)' },
+        { name: '3', value: '/ayuda - Te muestra todos los comandos disponibles' },
         { name: '4', value: 'Some value here' },
         { name: '5', value: 'Some value here' },
         { name: '6', value: 'Some value here' },
@@ -71,7 +71,20 @@ module.exports = {
 //         .setName('juego')
 //         .setDescription('Elige un rol que describa el juego que buscas')
 //         .setRequired(true)),
+module.exports = {
 
+
+    data: new SlashCommandBuilder()
+        .setName('help')
+        .setDescription('muestra todos los comandos'),
+    async execute(interaction) {
+
+        await interaction.reply('Kibu esta buscando...');
+        await interaction.channel.send({ embeds: [culoembed] })
+        //await interaction.channel.send({ components: [culorow] })
+
+    },
+};
 // async execute(/** @type {ChatInputCommandInteraction<'cached'>} */ interaction) {
 
 //const game = interaction.options.getRole('juego')
