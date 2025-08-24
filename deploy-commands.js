@@ -30,8 +30,8 @@ for (const folder of commandFolders) {
 const rest = new REST().setToken(token);
 
 
-// deletes all old commands
-rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: [] })
+ // deletes all old commands
+rest.put(Routes.applicationCommands(clientId/*, guildId*/), { body: [] })
 	.then(() => console.log('Successfully deleted all guild commands.'))
 	.catch(console.error);
 
