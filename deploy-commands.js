@@ -49,7 +49,10 @@ rest.put(Routes.applicationCommands(clientId/*, guildId*/), { body: [] })
 			{ body: commands },
 		);
 
-		console.log(`Successfully reloaded ${data.length} application (/) commands.`);
+		if (Array.isArray(data)) {
+  console.log(`Successfully reloaded ${data.length} application (/) commands.`);
+}
+		//console.log(`Successfully reloaded ${data.length} application (/) commands.`);
 	} catch (error) {
 		// And of course, make sure you catch and log any errors!
 		console.error(error);
