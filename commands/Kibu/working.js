@@ -33,7 +33,6 @@ module.exports = {
         .setDescription('genera el mensaje de mantenimiento'),
     async execute(interaction) {
 
-        await interaction.reply('Kibu esta pensando...');
         await interaction.channel.send({ embeds: [culoembed] })
     
     },
