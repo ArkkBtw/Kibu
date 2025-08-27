@@ -14,10 +14,10 @@ const { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ActionRowBuilder,
 const culoembed = new EmbedBuilder()
     .setColor('#71368A')
     //.set title: prints title
-    .setTitle('Comandos disponibles')
+    .setTitle('Ups, este canal está en mantenimiento en este momento')
     //.setURL('https://discord.js.org/')
     //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-    .setDescription('Ups, este canal está en mantenimiento en este momento.')
+    .setDescription('Lo sentimos, prueba más tarde o contacta con un administrador para más información.')
     .setThumbnail('https://i.imgur.com/6LnjnOv.png')
     //.addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
     //.setImage('https://i.imgur.com/bC5CdRI.png')
