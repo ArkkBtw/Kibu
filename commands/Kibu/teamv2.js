@@ -1,17 +1,4 @@
-const { 
-    userMention, 
-    Role, 
-    SlashCommandBuilder, 
-    SlashCommandRoleOption, 
-    ChatInputCommandInteraction, 
-    SlashCommandStringOption, 
-    InteractionCallback, 
-    EmbedBuilder, 
-    ButtonBuilder, 
-    ButtonStyle, 
-    ActionRowBuilder, 
-    roleMention 
-} = require('discord.js');
+const { userMention, Role, SlashCommandBuilder, SlashCommandRoleOption, ChatInputCommandInteraction, SlashCommandStringOption, InteractionCallback, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, roleMention } = require('discord.js');
 
 const gamesOfRecentPeople = new Map()
 
@@ -20,7 +7,7 @@ function createculoembed(list, game) {
     return new EmbedBuilder()
         .setColor('#E67E22')
         .setTitle('jugadores recientes')
-        .setDescription("¡Miau! Estos son algunos de los jugadores recientes que estaban cazando un compañero para este juego.")
+        .setDescription("¡Meow! Estos son algunos de los jugadores recientes que estaban cazando un compañero para este juego.")
         .setThumbnail('https://i.imgur.com/bC5CdRI.png')
         .addFields(
             list.map(id => ({ name: "Jugador", value: userMention(id) }))
@@ -31,7 +18,7 @@ function createculoembed(list, game) {
 module.exports = {
 
     data: new SlashCommandBuilder()
-        .setName('team2')
+        .setName('team')
         .setDescription('Encuentra gente que ha buscado equipo recientemente')
         .addRoleOption(new SlashCommandRoleOption()
             .setName('juego')

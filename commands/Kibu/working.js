@@ -17,19 +17,8 @@ const culoembed = new EmbedBuilder()
     .setTitle('Comandos disponibles')
     //.setURL('https://discord.js.org/')
     //.setAuthor({ name: 'Some name', iconURL: 'https://i.imgur.com/2Utpujo.png', url: 'https://lol.es' })
-    .setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
-    .setThumbnail('https://i.imgur.com/bC5CdRI.png')
-    .addFields(
-        { name: '1', value: '/Shop - Te muestra el link directo al servidor' },
-        { name: '2', value: '/team <juego> - Encuentra gente que buscaba alguien para jugar recientemente (BETA)' },
-        { name: '3', value: '/ayuda - Te muestra todos los comandos disponibles' },
-        { name: '4', value: '/bump - Ayudas al servidor posicionandolo en una pagina web' },
-        { name: '5', value: 'Some value here' },
-        { name: '6', value: 'Some value here' },
-        { name: '\u200B', value: '\u200B' },
-        // { name: 'Inline field title', value: 'Some value here', inline: true },
-        // { name: 'Inline field title', value: 'Some value here', inline: true },
-    )
+    .setDescription('Ups, este canal está en mantenimiento en este momento.')
+    .setThumbnail('https://i.imgur.com/6LnjnOv.png')
     //.addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
     //.setImage('https://i.imgur.com/bC5CdRI.png')
     //.setTimestamp()
