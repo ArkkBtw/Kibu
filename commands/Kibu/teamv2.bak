@@ -12,7 +12,7 @@ function createculoembed(list, game) {
         .addFields(
             list.map(id => ({ name: "Jugador", value: userMention(id) }))
         )
-        .setTimestamp()
+        //.setTimestamp()
 }
 
 module.exports = {
