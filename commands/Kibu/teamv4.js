@@ -20,14 +20,14 @@ if (fs.existsSync(path)) {
     console.log('Datos cargados desde gamesData.json');
 }
 
-// 💾 Guardar el Map en archivo
+//  Guardar el Map en archivo
 function saveMapToFile() {
     const obj = Object.fromEntries(gamesOfRecentPeople);
     fs.writeFileSync(path, JSON.stringify(obj, null, 2));
     console.log('Datos guardados en gamesData.json');
 }
 
-// 🛑 Guardar al cerrar el proceso
+//  Guardar al cerrar el proceso
 process.on('exit', saveMapToFile);
 process.on('SIGINT', () => {
     saveMapToFile();

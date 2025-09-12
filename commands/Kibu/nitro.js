@@ -17,8 +17,8 @@ const culoembed = new EmbedBuilder()
     //.setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
     .setThumbnail('https://i.imgur.com/ub9ky8m.gif')
     .addFields(
-        { name: '__CHAT__', value: '\n🔹 - Rol Booster <@&1350953924886138942> \n🔹 - Permisos de imagen en el Chat general  \n🔹 - Cambio de nombre \n🔹 - Adelantos sobre noticias del servidor \n🔹 - Emogis y stickers externos \n🔹 - Mensajes de voz \n 🔹 - Crear encuestas' },
-        { name: '__VOZ__', value: '\n🔸 - Acceso a panel de sonidos \n🔸 - Cambiar el estado de el canal de voz \n🔸 - Acceso a actividades' },
+        { name: '__CHAT__', value: '\n🔹 - Rol especial <@&1350953924886138942> \n🔹 - Permisos para enviar imágenes en el chat general  \n🔹 - Cambio de nombre \n🔹 - Acceso anticipado a noticias del servidor \n🔹 - Uso de emojis y stickers externos \n🔹 - Envío de mensajes de voz \n 🔹 - Crear encuestas' },
+        { name: '__VOZ__', value: '\n🔸 - Acceso al panel de sonidos \n🔸 - Cambiar el estado del canal de voz \n🔸 - Acceso a actividades' },
         { name: '\u200B', value: '\u200B' },
         
     )

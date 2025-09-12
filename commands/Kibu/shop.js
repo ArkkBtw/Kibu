@@ -42,7 +42,7 @@ const culoembed = new EmbedBuilder()
 // create new button with style
 const culobutton = new ButtonBuilder()
     // .setCustomId('button1')
-    .setLabel("button label")
+    .setLabel("Click aquí - Tienda")
     .setURL("https://lol.es")
     .setStyle(ButtonStyle.Link)
 
