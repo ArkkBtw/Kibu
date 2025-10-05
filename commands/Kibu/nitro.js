@@ -19,6 +19,7 @@ const culoembed = new EmbedBuilder()
     .addFields(
         { name: '__CHAT__', value: '\n🔹 - Rol especial <@&1350953924886138942> \n🔹 - Permisos para enviar imágenes en el chat general  \n🔹 - Cambio de nombre \n🔹 - Acceso anticipado a noticias del servidor \n🔹 - Uso de emojis y stickers externos \n🔹 - Envío de mensajes de voz \n 🔹 - Crear encuestas' },
         { name: '__VOZ__', value: '\n🔸 - Acceso al panel de sonidos \n🔸 - Cambiar el estado del canal de voz \n🔸 - Acceso a actividades' },
+        { name: '__OTROS__', value: '\n 🗣️ El staff valorará tu opinión y tendrá más peso en decisiones del servidor. \n 🤝 Tendrás una relación cercana con el staff. \n 🧪 Tu ayuda durante la fase BETA será reconocida y tomada en cuenta.' },
         { name: '\u200B', value: '\u200B' },
         
     )
