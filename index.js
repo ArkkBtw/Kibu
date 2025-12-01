@@ -25,11 +25,11 @@ const { token } = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences] });
  
 const desc = [`El gatito oficial de BWF 💫`,
-    `Protegiendo mi territorio: BWF 🐾`,
-    `Rondando por los rincones de BWF 🌈`,
+    `Gatito monitoreando 👀`,
+    `Cuidando el servidor 🛡️`,
     `Durmiendo en BWF 💤`,
     `Cazando bugs dentro de BWF 🐛`,
-    `Controlando el caos elegante de BWF 🙀`
+    `Tareas hechas, ¡Meow! ✔️`
 ];
 
 let i = 0;
