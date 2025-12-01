@@ -20,7 +20,7 @@ const culoembed = new EmbedBuilder()
     .setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
     .setThumbnail('https://i.imgur.com/bC5CdRI.png')
     .addFields(
-        { name: '__COMMANDOS__', value: '\n🔸 - **/team <juego>** - Encuentra gente que buscaba alguien para jugar recientemente (BETA) \n🔸 - **/bump** - Ayudas al servidor posicionandolo en (Disboard)  \n🔸 - **/Rank <nombre>** - Te muestra tu rango o el de otra persona (AmariBot) \n🔸 - **/Leaderboard** - Te enseña el ranking actual (AmariBot) \n🔸 -  \n🔸 -  \n 🔸 - ' },
+        { name: '__Lista de comandos__', value: '\n🔸 - **/team <juego>** - Encuentra gente reciente para jugar (BETA) \n🔸 - **/bump** - Ayudas al servidor posicionandolo en (Disboard)  \n🔸 - **/rank** - Muestra tu rango o el de otra persona (AmariBot) \n🔸 - **/leaderboard** - Te enseña el ranking actual (AmariBot) \n🔸 - **/spoiler <texto> - Escribe en formato de spoiler** \n🔸 -  \n 🔸 - ' },
         { name: '\u200B', value: '\u200B' },
         // { name: 'Inline field title', value: 'Some value here', inline: true },
         // { name: 'Inline field title', value: 'Some value here', inline: true },

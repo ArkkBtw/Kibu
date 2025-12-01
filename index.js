@@ -23,11 +23,30 @@ const { token } = require('./config.json');
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences] });
+ 
+const desc = [`El gatito oficial de BWF 💫`,
+    `Protegiendo mi territorio: BWF 🐾`,
+    `Rondando por los rincones de BWF 🌈`,
+    `Durmiendo en BWF 💤`,
+    `Cazando bugs dentro de BWF 🐛`,
+    `Controlando el caos elegante de BWF 🙀`
+];
+
+let i = 0;
 
 
 client.once("ready", () => {
-	// Playing in my support server
-	client.user.setActivity(" " + " BWF Crecer ¡Meoww!", { type: 3 });
+    // Ejecutar inmediatamente una vez
+    client.user.setActivity(desc[i], { type: 3 });
+
+    // Cambiar cada 24 horas
+    setInterval(() => {
+        i++;
+        if (i >= desc.length) i = 0;
+
+        client.user.setActivity(desc[i], { type: 3 });
+
+    }, 86400000); // 24h = 86,400,000 ms
 });
 
 

@@ -1,0 +1,34 @@
+const { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ActionRowBuilder, EmbedBuilder, SlashCommandBuilder, SlashCommandRoleOption, ChatInputCommandInteraction, Embed } = require('discord.js')
+
+
+
+const culoembed = new EmbedBuilder()
+    .setColor('#ff57ce')
+    .setTitle('💜 Roles y sus beneficios')
+    //.setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
+    .setThumbnail('https://i.imgur.com/ub9ky8m.gif')
+    .addFields(
+        { name: '__Roles por donacion__', value: '\n🔹 - Rol especial <@&1350953924886138942> \n🔹 - Permisos para enviar imágenes en el chat general  \n🔹 - Cambio de nombre \n🔹 - Acceso anticipado a noticias del servidor \n🔹 - Uso de emojis y stickers externos \n🔹 - Envío de mensajes de voz \n 🔹 - Crear encuestas' },
+        { name: '__Roles por actividad__', value: '\n🔸 - Acceso al panel de sonidos \n🔸 - Cambiar el estado del canal de voz \n🔸 - Acceso a actividades' },
+        { name: '__OTROS__', value: '\n 🗣️ El staff valorará tu opinión y tendrá más peso en decisiones del servidor. \n 🤝 Tendrás una relación cercana con el staff. \n 🧪 Tu ayuda durante la fase BETA será reconocida y tomada en cuenta.' },
+        { name: '\u200B', value: '\u200B' },
+        
+    )
+    
+    .setFooter({ text: 'Powered by Kibu', iconURL: 'https://i.imgur.com/bC5CdRI.png' });
+
+
+module.exports = {
+
+
+    data: new SlashCommandBuilder()
+        .setName('roles')
+        .setDescription('Roles disponibles y sus beneficios'),
+    async execute(interaction) {
+
+        //await interaction.reply('Kibu esta buscando...');
+        await interaction.channel.send({ embeds: [culoembed] })
+        //await interaction.channel.send({ components: [culorow] })
+
+    },
+};
