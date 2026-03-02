@@ -6,7 +6,7 @@ const culoembed = new EmbedBuilder()
     .setColor('#ff57ce')
     .setTitle('💜 Roles y sus beneficios')
     //.setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
-    .setThumbnail('https://i.imgur.com/ub9ky8m.gif')
+    .setThumbnail('https://i.imgur.com/hKMsfDI.gif')
     .addFields(
         { name: '__Roles por donacion__', value: '\n🔹 - Rol especial <@&1350953924886138942> \n🔹 - Permisos para enviar imágenes en el chat general  \n🔹 - Cambio de nombre \n🔹 - Acceso anticipado a noticias del servidor \n🔹 - Uso de emojis y stickers externos \n🔹 - Envío de mensajes de voz \n 🔹 - Crear encuestas' },
         { name: '__Roles por actividad__', value: '\n🔸 - Acceso al panel de sonidos \n🔸 - Cambiar el estado del canal de voz \n🔸 - Acceso a actividades' },
@@ -22,7 +22,7 @@ module.exports = {
 
 
     data: new SlashCommandBuilder()
-        .setName('roles')
+        .setName('roletable')
         .setDescription('Roles disponibles y sus beneficios'),
     async execute(interaction) {
 

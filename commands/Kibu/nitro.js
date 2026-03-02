@@ -13,7 +13,7 @@ const { Client, GatewayIntentBits, ButtonBuilder, ButtonStyle, ActionRowBuilder,
 
 const culoembed = new EmbedBuilder()
     .setColor('#ff57ce')
-    .setTitle('💜 Beneficios para Boosters')
+    .setTitle('🚀 Beneficios para Boosters')
     //.setDescription('Meow! Kibu te enseñara todos los comandos disponibles a cambio de un pescadito')
     .setThumbnail('https://i.imgur.com/ub9ky8m.gif')
     .addFields(

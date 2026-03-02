@@ -17,12 +17,20 @@ app.listen(port, () => {
 // Require the necessary discord.js classes
 const fs = require('node:fs');
 const path = require('node:path');
+const gamepath = "./presenceData.json";
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
 const { token } = require('./config.json');
-
+const mensajesBusqueda = new Map();
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildPresences] });
+const client = new Client({ 
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildPresences
+    ]
+});
+
+client.mensajesBusqueda = mensajesBusqueda;
  
 const desc = [`El gatito oficial de BWF 💫`,
     `Gatito monitoreando 👀`,
@@ -49,6 +57,70 @@ client.once("ready", () => {
     }, 86400000); // 24h = 86,400,000 ms
 });
 
+/*
+//pressence checker
+
+// Cargar archivo o crearlo
+function loadData() {
+	if (!fs.existsSync(gamepath)) {
+		fs.writeFileSync(gamepath, JSON.stringify({}, null, 2));
+	}
+	return JSON.parse(fs.readFileSync(gamepath, 'utf-8'));
+}
+
+// Guardar archivo
+function saveData(data) {
+	fs.writeFileSync(gamepath, JSON.stringify(data, null, 2));
+}
+
+client.on("presenceUpdate", async (oldPresence, newPresence) => {
+	if (!newPresence || !newPresence.user) return;
+
+	const userId = newPresence.user.id;
+	const username = newPresence.user.username;
+
+	// find activity "Playing" 0
+	const gameActivity = newPresence.activities?.find(
+		act => act.type === 0 // "Playing" and listening?
+	);
+
+
+
+	const gameName = gameActivity ? gameActivity.name : null;
+
+
+	// hmm load
+	const data = loadData();
+
+	// create the list
+	if (!data[userId]) {
+		data[userId] = {
+			username: username,
+			games: [],
+			updatedAt: null
+		};
+	}
+
+	// we push the song and game in to the upper list
+	if (gameName && !data[userId].games.includes(gameName)) {
+		data[userId].games.push(gameName);
+		console.log(`Añadido juego para ${username}: ${gameName}`);
+	}
+
+
+
+	data[userId].updatedAt = new Date().toISOString();
+
+	// save
+	saveData(data);
+
+	console.log(`updated ${username}: jugando → ${gameName}`);
+	//console.log(newPresence.activities);
+
+});
+
+//pressence checker
+*/
 
 const commands = new Collection();
 const foldersPath = path.join(__dirname, 'commands');
@@ -80,6 +152,7 @@ client.once(Events.ClientReady, function (readyClient) {
 client.on(Events.InteractionCreate, async interaction => {
 	if (!interaction.isChatInputCommand()) return;
 
+
 	const command = commands.get(interaction.commandName);
 
 	if (!command) {
@@ -98,6 +171,39 @@ client.on(Events.InteractionCreate, async interaction => {
 		}
 	}
 });
+
+/*
+client.on(Events.InteractionCreate, async interaction => {
+    if (!interaction.isButton()) return;
+
+    // BOTÓN: JUGAR
+    if (interaction.customId === 'aceptar_juego') {
+        await interaction.reply({
+            content: '✅ Te marqué como listo para jugar.',
+            flags: MessageFlags.Ephemeral
+        });
+        return;
+    }
+
+    // BOTÓN: NO POR AHORA
+    if (interaction.customId === 'rechazar_juego') {
+        await interaction.reply({
+            content: '⏳ Sin problema, quizá luego.',
+            flags: MessageFlags.Ephemeral
+        });
+        return;
+    }
+
+    // BOTÓN: BLOQUEAR
+    if (interaction.customId === 'bloquear_juego') {
+        await interaction.reply({
+            content: '🚫 No volverás a recibir invitaciones.',
+            flags: MessageFlags.Ephemeral
+        });
+        return;
+    }
+}); */
+
 
 // Log in to Discord with your client's token
 client.login(token);
